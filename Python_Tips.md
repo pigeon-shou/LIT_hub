@@ -36,3 +36,16 @@
 - for index, name in enumerate(names, start=1 )１からindexスタートすることもできる
 - print(index, name)とすると表のよう見える
 
+## groupby()
+- df.groupby("team")["score"].mean()
+- 何で集めるか、どの列か、どの処理か
+- sum(),max(),count()等
+- df.group(["", ""]).mean()listを渡して複数列指定
+- reset_index()で可読性を上げる
+
+## agg()
+- aggregation(集計)
+- メソッドチェーンで繋いで行き複数処理を同時集計できる
+- agg(["mean", "max", "min", "count", "sum"])
+- 複数はlist化を覚えよう
+- df.groupby("team")["score"].agg(["mean", "sum", "count", "max"]).sort_values(["mean", "count"]).reset_index()全部盛り
