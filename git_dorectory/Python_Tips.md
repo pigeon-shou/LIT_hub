@@ -28,3 +28,11 @@
 - scoreで整理した後、scoreが同じ人がいたらあかさたな順に整理
 - indexを振り直すにはreset_index()メソッド
 - (drop=True)で古いindex列を捨てる
+
+## enumerate()
+- for index, name in enumerate(names):
+- indexとnameを同時に代入しているイメージ
+- a, b = [10, 20]と同様
+- for index, name in enumerate(names, start=1 )１からindexスタートすることもできる
+- print(index, name)とすると表のよう見える
+
