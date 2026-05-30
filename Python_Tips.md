@@ -1,4 +1,7 @@
 # PYthon_studyでの気づき
+## 環境構築
+- python3 -m venv venv （venvモジュールでvenv仮想環境を作る）-mはモジュールのm
+- source venv/bin/activateで仮想環境接続
 
 ## pandas
 - upperメソッドで大文字
