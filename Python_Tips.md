@@ -49,3 +49,8 @@
 - agg(["mean", "max", "min", "count", "sum"])
 - 複数はlist化を覚えよう
 - df.groupby("team")["score"].agg(["mean", "sum", "count", "max"]).sort_values(["mean", "count"]).reset_index()全部盛り
+
+## merge
+- キーとなるカラムをonに記述
+- pd.merge(users, scores, on="")
+- how = " inner, left rigth outer" 共通部分だけ、左準拠、　右準拠、　全残し
