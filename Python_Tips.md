@@ -61,16 +61,20 @@
 ## 復習
 - csv読み込み直後df.head()で先頭五行を確認する
 - groupby("department"), groupby("product"), groupby("date")
-- SELECT department, 
+- SQl版
+SELECT department, 
 AVG(salary) 
 FROM employees
 GROUP BY department
 pandas変換
 df.groupby("department")["salary"].mean()
-- SyntaxError	コードの文法が間違っている	if x == 1（: が抜けている）
-IndentationError	インデントが正しくない（SyntaxErrorの一種）	if ブロック内のコードのスペースが揃っていない
-NameError	定義されていない変数・関数を参照した	print(age)（age が未定義）
-TypeError	型が合わない操作をした・引数の数が違う	"hello" + 3、__init__ のスペルミスで引数を受け取れない
-AttributeError	オブジェクトに存在しない属性・メソッドを呼んだ	"hello".appnd("!")（append のスペルミス）
-ValueError	型は正しいが値が不正	int("abc")、list.remove(99)（要素が存在しない）
+- SyntaxError	文法が間違っている
+- IndentationError	インデントが正しくない
+- NameError	定義されていない変数・関数を参照した
+- TypeError	型が合わない操作をした・引数の数が違う
+- AttributeError	オブジェクトに存在しない属性・メソッドを呼んだ
+- ValueError	型は正しいが値が不正
 - df = pd.read_csv("")で外部csv参照
+- Seriesは一列なので計算が速い前要素が同じ型のため
+- DataFrameは複数のSeriesが並んだ表全体csvやexcelをそのまま取り込んだとき
+- .plot()やfillna()を使うときはSeriesがそのまま使える
