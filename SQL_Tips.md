@@ -1,0 +1,15 @@
+# コマンド言語化
+- SELECT * テーブルからデータを取得する * は全カラム
+- WHERE 取得するデータの条件を絞り込むために使用する
+- ORDER BY 指定したカラムを基準に並び替えます　DESCで降順になる
+- INSERT INTO テーブル名(カラム1, カラム2) VALUES() テーブルに新しいレコードを追加する
+- UPDATE テーブル名 SET カラム WHERE 既存データを更新する　WHEREをつけないと全レコードが更新される
+- DELETE FROM テーブル名 WHERE 条件に一致するレコードを削除
+- GROUP BY SELECT カラム名, 集計 FROM テーブル名 GROUPBY カラム名 指定したカラムごとにデータをグループ化し集計をおこなう
+- AVG() SELECT AVG() FROM テーブル名 平均を求める集約関数
+- COUNT(*) SELECT COUNT(*) FROM テーブル名 レコード数を集約する
+- SUM() SELECT SUM() FROM テーブル名 数値カラムの合計数を求める集約関数
+- MAX()MIN() SELECT MAX() FROM テーブル名 最大値最小値を集約する関数
+- HAVING SELECT カラム　集約関数 FROM テーブル名 GROUP BY カラム HAVING 条件式　GROUPBYで集計した結果を条件で絞り込む
+- JOIN SELECT テーブル名.カラム, テーブル名.カラム FROM 元になるテーブル JOIN くっつけるテーブル ON 関連カラム= 関連カラム 複数のテーブルを関連カラムで統合する
+- Subquery SELECT * FROM WHERE 条件(SELECT 集約関数　FROM); SQLの中で別のSQLの実行結果を利用する
